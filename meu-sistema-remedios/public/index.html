@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque e Agenda de Remédios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>💊 Controle de Remédios</h1>
+    </header>
+
+    <main class="container">
+        <!-- SEÇÃO DE ESTOQUE DE MEDICAMENTOS -->
+        <section class="card">
+            <h2>Estoque de Medicamentos</h2>
+            <form id="form-medicamento">
+                <input type="text" id="med-nome" placeholder="Nome do remédio" required />
+                <input type="number" id="med-qtd" placeholder="Quantidade em estoque" required />
+                <input type="text" id="med-dosagem" placeholder="Dosagem (ex: 500mg)" />
+                <button type="submit">Cadastrar Medicamento</button>
+            </form>
+
+            <h3>Medicamentos Cadastrados</h3>
+            <ul id="lista-medicamentos" class="lista"></ul>
+        </section>
+
+        <!-- SEÇÃO DE AGENDA DE HORÁRIOS -->
+        <section class="card">
+            <h2>Agenda de Horários</h2>
+            <form id="form-agenda">
+                <select id="agenda-med" required>
+                    <option value="">Selecione o medicamento</option>
+                </select>
+                <input type="date" id="agenda-data" required />
+                <input type="time" id="agenda-horario" required />
+                <button type="submit">Agendar Horário</button>
+            </form>
+
+            <h3>Próximas Doses</h3>
+            <ul id="lista-agenda" class="lista"></ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
